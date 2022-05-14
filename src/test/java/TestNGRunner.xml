@@ -1,14 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="test suite">
-<test name="Test Suite1" verbose="1" parallel="methods" thread-count="2">
-    <classes>
-<!--        <class name="MySimpleTest"/>-->
-<!--   <class name="AnnotationsTest"/>&ndash;&gt;-->
-<!--        <class name="DataProviderTests"/>-->
-<!--        <class name="ExceptionsTests"/>-->
-<!--        <class name="ParametersTests"/>-->
-<!--        <class name="PriorityTests"/>-->
-        <class name="AssertionsTests"/>
-    </classes>
-</test>
-        </suite>
+
+<suite name="Suite1" verbose="1" parallel="methods" thread-count="2">
+    <test name="RegressionSuite">
+        <classes>
+            <class name="lecture10homework.TestSuite"/>
+        </classes>
+    </test>
+</suite>
