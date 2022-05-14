@@ -1,6 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1" parallel="methods" thread-count="2">
+    <groups>
+        <run>
+            <include name="client1"/>
+            <include name="smoke test"/>
+            <include name="regression"/>
+            <include name="client2"/>
+            <include name="client3"/>
+            <exclude name="exclude"/>
+        </run>
+    </groups>
     <test name="RegressionSuite">
         <classes>
             <class name="lecture10homework.TestSuite"/>

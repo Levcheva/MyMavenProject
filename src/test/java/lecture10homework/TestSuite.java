@@ -14,7 +14,7 @@ public class TestSuite extends BaseTest {
         };
     }
 
-    @Test(groups = "data1", dataProvider = "Smoke Test Suite")
+    @Test(groups = "exclude", dataProvider = "Smoke Test Suite")
     public void verifyData1(int n1, int n2) {
         long id = Thread.currentThread().getId();
         assertEquals(n1 + n2, 3005, "Incorrect calculation!");
@@ -41,14 +41,14 @@ public class TestSuite extends BaseTest {
         assertEquals(multiplyResult, 15000, "Wrong calculation!");
     }
 
-    @Test(groups = "client4", dataProvider = "Smoke Test Suite")
+    @Test(groups = "client2", dataProvider = "Smoke Test Suite")
     public void verifyDevision(int number1, int number2) {
         long id = Thread.currentThread().getId();
         double devisionResult = number1 / number2;
         assertEquals(devisionResult, 600, "Wrong calculation!");
     }
 
-    @Test(groups = "client5", dataProvider = "Smoke Test Suite")
+    @Test(groups = "client3", dataProvider = "Smoke Test Suite")
     public void verifyModulus(int number1, int number2) {
         long id = Thread.currentThread().getId();
         double modulusResult = number1 % number2;
